@@ -7,7 +7,18 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="cover cover-left"></div>
+<div class="cover cover-right"></div>
 <header class="header">
+	<div class="header__top">
+		<div class="container">
+			<div class="header__top-in">
+				<div class="header__top-logo-wp">
+					<a href="/"><img src="images/logo.png" alt="ViKino" class="header__top-logo"></a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="header__left">
 		<div class="header__left-title-wp">
 			<div class="header__left-title-in">
@@ -33,7 +44,10 @@
 		</form>
 	</div>
 	<div class="header__right">
-		
+		<div class="header__right-title-wp">
+			<h1 class="header__right-title">ВиКино</h1>
+			<p class="header__right-text">Снимаем то,<br> что вызвает интерес</p>
+		</div>
 	</div>
 </header>		
 <main class="main">
