@@ -21,6 +21,13 @@ ul {
 
 @font-face {
 	font-family: 'Montserrat';
+	src: url("../fonts/montserrat/Montserrat-Medium.ttf") format("truetype");
+	font-weight: 500;
+	/*font-family: 'Montserrat', sans-serif;*/
+}
+
+@font-face {
+	font-family: 'Montserrat';
 	src: url("../fonts/montserrat/Montserrat-SemiBold.ttf") format("truetype");
 	font-weight: 600;
 	/*font-family: 'Montserrat', sans-serif;*/
@@ -40,7 +47,7 @@ body {
 .container {
 	width: 100%;
 	height: inherit;
-	max-width: 1250px;
+	max-width: 1290px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -114,6 +121,10 @@ body {
 }
 
 .header {
+	display: flex;
+}
+
+.header__sides {
 	display: flex;
 }
 
@@ -220,9 +231,8 @@ body {
 }
 
 .header__title {
-	font-size: 36px;
+	font-size: 50px;
 	margin-bottom: 10px;
-	text-transform: uppercase;
 }
 
 .header__subtitle {
@@ -783,4 +793,75 @@ body {
 .footer__copyright {
 	text-align: center;
 	margin: 67px 0 33px 0;
+}
+
+.post-prod__montage {
+	background: url('../images/bgs/post-prod-montage.jpg') no-repeat center;
+	background-size: cover;
+}
+
+.post-prod__colors {
+	background: url('../images/bgs/post-prod-colors.jpg') no-repeat center;
+	background-size: cover;
+}
+
+.post-prod__visuals {
+	background: url('../images/bgs/post-prod-visuals.jpg') no-repeat center;
+	background-size: cover;
+}
+
+.post-prod__sounds {
+	background: url('../images/bgs/post-prod-sounds.jpg') no-repeat center;
+	background-size: cover;
+}
+
+.post-prod__content {
+	display: flex;
+	padding: 30px 60px;
+	background: rgba(248, 248, 248, 0.9);
+	border: 2px solid #000;
+	max-width: 860px;
+	width: 100%;
+	margin-left: 300px;
+}
+
+.post-prod__section-left {
+	max-width: 343px;
+	width: 100%;
+	margin-right: 60px;
+}
+
+.post-prod__section-title {
+	color: #656565;
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 32px;
+}
+
+.post-prod__section-subtitle {
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 25px;
+}
+
+.post-prod__section-text{
+	font-size: 16px;
+	letter-spacing: 0.1em;
+	line-height: 19px;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+#fp-nav.fp-right {
+	right: 30px !important;
+}
+
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	background: #F8F8F8 !important;
+	border: 2px solid #000 !important;
+	border-radius: 0 !important;
+	transform: rotate(45deg) !important;
+	/* width: 14px !important;
+	height: 14px !important; */
 }

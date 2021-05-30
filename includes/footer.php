@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer section fp-auto-height">
     <div class="footer__top">
         <div class="container">
             <div class="footer__content">
