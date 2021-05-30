@@ -16,14 +16,21 @@
 				<div class="header__top-logo-wp">
 					<a href="/"><img src="images/logo.png" alt="ViKino" class="header__top-logo"></a>
 				</div>
+				<div class="header__nav-wp">
+					<ul class="header__nav">
+						<li class="header__nav-item"><a href="/">Главная</a></li>
+						<li class="header__nav-item"><a href="#">Post-production</a></li>
+						<li class="header__nav-item"><a href="#">Проекты</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="header__left">
 		<div class="header__left-title-wp">
 			<div class="header__left-title-in">
-				<h2 class="header__title">Кино-видеостудия</h2>
-				<h3 class="header__subtitle">Мильчаковой Виктории</h3>
+				<h2 class="header__title">ВиКино</h2>
+				<h3 class="header__subtitle">Кино-видеостудия</h3>
 			</div>
 		</div>
 		<form method="post" class="header__left-form-wp polygon">
@@ -51,6 +58,21 @@
 	</div>
 </header>		
 <main class="main">
+	<section class="about-us">
+		<div class="container about-us__container">
+			<div class="about-us__in">
+				<div class="about-us__title-wp">
+					<h2 class="section__title section__title_white">О компании</h2>
+				</div>
+				<div class="about-us__content polygon">
+					<p class="about-us__text">Наша киностудия  — это шесть современных, специализированных павильонов, собственное кинооборудование, 
+					которое удовлетворит самую избирательную кино-съемочную группу, одна из самых высокотехнологичных студий post-production в России, 
+					цех изготовления декораций, собственный автопарк.</p>
+					<p class="about-us__text">Передовое киносъемочное оборудование позволяет организовать киносъемочный процесс любой сложности «под ключ».</p>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="clients">
 		<div class="container">
 			<div class="section__in clients__in">
@@ -159,7 +181,7 @@
 		<div class="container">
 			<div class="pros__in">
 				<div class="section__title-wp">
-					<h2 class="section__title">Почему стоит заказать у нас</h2>
+					<h2 class="section__title section__title_white">Почему стоит заказать у нас</h2>
 				</div>
 				<div class="pros__items-wp">
 					<div class="pros__item pros__item_reversed">
@@ -191,5 +213,6 @@
 		</div>
 	</section>
 </main>
+<?php include "includes/footer.php" ?>
 </body>
 </html>
