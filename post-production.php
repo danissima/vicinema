@@ -20,36 +20,30 @@
         <div class="header__left">
             <div class="header__left-title-wp">
                 <div class="header__left-title-in">
-                    <h2 class="header__title">ВиКино</h2>
-                    <h3 class="header__subtitle">Кино-видеостудия</h3>
+                    <img class="header-title" src="images/post-prod-title.png" alt="post-prod">
                 </div>
             </div>
-            <form method="post" class="header__left-form-wp polygon">
-                <p class="header__form-text">Проконсультируем и бесплатно предложим идеи. Заполните форму и мы свяжемся с вами</p>
-                <label for="name" class="header__form-item-wp">
-                    <img src="images/icons/person.png" alt="person" class="header__form-item-icon">
-                    <input type="text" placeholder="Имя" class="header__form-item-input">
-                </label>
-                <label for="name" class="header__form-item-wp">
-                    <img src="images/icons/mail.png" alt="mail" class="header__form-item-icon">
-                    <input type="text" placeholder="E-mail" class="header__form-item-input">
-                </label>
-                <label for="name" class="header__form-item-wp">
-                    <img src="images/icons/phone.png" alt="phone" class="header__form-item-icon">
-                    <input type="text" placeholder="Телефон" class="header__form-item-input">
-                </label>
-                <button class="header__form-button">Отправить</button>
-            </form>
+            <div class="header__left-form-wp polygon post-prod__left-block">
+                <p class="header__text">Киностудия предоставляет весь спектр услуг post-production «под ключ» для реализации проектов любой сложности. 
+                    Новейшие технологии в области аудиовизуального производства позволяют работать одновременно над несколькими художественными картинами.</p>
+                
+            </div>
         </div>
         <div class="header__right">
-            <div class="header__right-title-wp">
-                <h1 class="header__right-title">ВиКино</h1>
-                <p class="header__right-text">Снимаем то,<br> что вызвает интерес</p>
+            <div class="post-prod__nav">
+                <div class="post-prod__nav-items">
+                    <a href="#montage" class="post-prod__nav-item">Видеомонтаж</a><a href="#colors" class="post-prod__nav-item">Цветокоррекция</a>
+                </div>
+                <hr class="sep">
+                <div class="post-prod__nav-items">
+                    <a href="#visuals" class="post-prod__nav-item">Визуальные эффекты</a><a href="#sounds" class="post-prod__nav-item">Монтаж звука</a>
+                </div>
             </div>
+            <div class="header-right__circle"></div>
         </div>
     </div>
 </header>
-    <div class="section post-prod__section post-prod__montage">
+    <div id="montage" class="section post-prod__section post-prod__montage">
         <div class="post-prod__content polygon">
             <div class="post-prod__section-left">
                 <h3 class="post-prod__section-title">ВИДЕОМОНТАЖ</h3>
@@ -62,7 +56,7 @@
             </div>
         </div>
     </div>
-    <div class="section post-prod__section post-prod__colors">
+    <div id="colors" class="section post-prod__section post-prod__colors">
     <div class="post-prod__content polygon">
             <div class="post-prod__section-left">
                 <h3 class="post-prod__section-title">ЦВЕТОКОРРЕКЦИЯ</h3>
@@ -76,7 +70,7 @@
             </div>
         </div>
     </div>
-    <div class="section post-prod__section post-prod__visuals">
+    <div id="visuals" class="section post-prod__section post-prod__visuals">
     <div class="post-prod__content polygon">
             <div class="post-prod__section-left">
                 <h3 class="post-prod__section-title">ВИЗУАЛЬНЫЕ ЭФФЕКТЫ</h3>
@@ -89,7 +83,7 @@
             </div>
         </div>
     </div>
-    <div class="section post-prod__section post-prod__sounds">
+    <div id="sounds" class="section post-prod__section post-prod__sounds">
     <div class="post-prod__content polygon">
             <div class="post-prod__section-left">
                 <h3 class="post-prod__section-title">МОНТАЖ ЗВУКА</h3>

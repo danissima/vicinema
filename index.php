@@ -14,8 +14,8 @@
 	<div class="header__left">
 		<div class="header__left-title-wp">
 			<div class="header__left-title-in">
-				<h2 class="header__title">ВиКино</h2>
-				<h3 class="header__subtitle">Кино-видеостудия</h3>
+				<img class="logo-img" src="images/logo.png" alt="camera">
+				<img class="title-img" src="images/logo-title.png" alt="vicinema">
 			</div>
 		</div>
 		<form method="post" class="header__left-form-wp polygon">
@@ -36,10 +36,7 @@
 		</form>
 	</div>
 	<div class="header__right">
-		<div class="header__right-title-wp">
-			<h1 class="header__right-title">ВиКино</h1>
-			<p class="header__right-text">Снимаем то,<br> что вызвает интерес</p>
-		</div>
+		<div class="header-right__circle"></div>
 	</div>
 </header>		
 <main class="main">

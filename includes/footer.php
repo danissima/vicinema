@@ -2,6 +2,9 @@
     <div class="footer__top">
         <div class="container">
             <div class="footer__content">
+                <div class="footer__logo">
+                    <a href="/"><img src="images/logo-title-red.png" alt="vicinema"></a>
+                </div>
                 <div class="footer__navs">
                     <div class="footer__nav-wp">
                         <h3 class="footer__nav-title">Услуги</h3>
