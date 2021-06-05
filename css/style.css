@@ -82,7 +82,7 @@ body {
 }
 
 .cover-right {
-	z-index: 1;
+	z-index: 2;
 	width: 100%;
 	bottom: calc(100vh - 80px);
 	right: 0;
@@ -95,7 +95,7 @@ body {
 	0% {
 		width: 62%;
 		bottom: -100vh;
-		background-color: rgba(228, 213, 239);
+		background-color: rgba(255,255,255,1);
 		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0);
 	}
 	20% {
@@ -104,13 +104,13 @@ body {
 	40% {
 		bottom: 0;
 		width: 62%;
-		background-color: rgba(228, 213, 239);
+		background-color: rgba(255,255,255,1);
 		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0);
 	}
 	70% {
 		width: 62%;
 		bottom: calc(100vh - 80px);
-		background-color: rgba(228, 213, 239);
+		background-color: rgba(255,255,255,0.8);
 		box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0);
 	}
 	100% {
@@ -899,8 +899,24 @@ body {
 	display: grid;
 }
 
-.catalog__item-poster {
+.catalog__item {
 	position: relative;
+}
+
+.catalog__item-link {
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.catalog__item-link:hover + .catalog__item-poster + .catalog__item-title {
+	color: #E43F4D;
+}
+
+.catalog__item-poster {
 	margin-bottom: 30px;
 }
 
@@ -924,9 +940,78 @@ body {
 	font-size: 30px;
 	font-weight: 600;
 	margin-bottom: 20px;
+	transition: color .15s ease-out;
 }
 
 .catalog__item-info {
 	font-size: 20px;
 	line-height: 30px;
+}
+
+.single-project__left {
+	position: relative;
+	padding: 170px 30px 100px 30px;
+}
+
+.single-project__right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-size: cover;
+	background-position: center;
+}
+
+.single-project__poster {
+	width: 342px;
+	margin-bottom: 45px;
+	border-radius: 5px;
+}
+
+.single-project__poster img {
+	width: 100%;
+	display: block;
+}
+
+.single-project__show-desc {
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 480px;
+	right: -45px;
+	z-index: 1;
+	background-color: #BFC5E6;
+	cursor: pointer;
+}
+
+.show-arrow {
+	transition: transform .6s ease;
+}
+
+.flip {
+	transform: rotate(-180deg);
+}
+
+.single-project__desc {
+	display: none;
+	margin-top: 80px;
+	height: calc(100% - 80px);
+	padding: 80px 110px;
+	background-color: #fff;
+}
+
+.single-project__title-wp {
+	margin-bottom: 35px;
+}
+.single-project__title-wp .section__title {
+	text-align: left;
+}
+
+.single-project__text {
+	font-size: 18px;
+	line-height: 27px;
+	font-weight: 500;
+	margin-bottom: 25px;
 }

@@ -11,22 +11,7 @@
 <div class="cover cover-left"></div>
 <div class="cover cover-right"></div>
 <header class="header">
-	<div class="header__top">
-		<div class="container">
-			<div class="header__top-in">
-				<div class="header__top-logo-wp">
-					<a href="/"><img src="images/logo.png" alt="ViKino" class="header__top-logo"></a>
-				</div>
-				<div class="header__nav-wp">
-					<ul class="header__nav">
-						<li class="header__nav-item"><a href="/">Главная</a></li>
-						<li class="header__nav-item"><a href="/post-production.php">Post-production</a></li>
-						<li class="header__nav-item"><a href="/projects.php">Проекты</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php include 'includes/header-top.php' ?>
 	<div class="header__left">
 		<div class="header__left-title-wp">
 			<div class="header__left-title-in">
@@ -74,6 +59,7 @@
                     </div>
                     <div id="catalog1" class="catalog__items catalog__items_active">
                         <div class="catalog__item">
+                            <a href="/single-project.php" class="catalog__item-link"></a>
                             <div class="catalog__item-poster">
                                 <img src="images/catalog/item1.jpg" alt="">
                                 <span class="catalog__item-rating">8.1</span>
