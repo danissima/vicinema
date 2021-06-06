@@ -6,6 +6,7 @@
 	<title>Post-Production</title>
 	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="icon" href="images/logo.png">
     <script src="js/fullpage.extensions.min.js" defer></script>
     <script src="js/post-production.js" defer></script>
 </head>
@@ -29,15 +30,26 @@
                 
             </div>
         </div>
-        <div class="header__right">
+        <div class="header__right post-prod__right">
             <div class="post-prod__nav">
                 <div class="post-prod__nav-items">
-                    <a href="#montage" class="post-prod__nav-item">Видеомонтаж</a><a href="#colors" class="post-prod__nav-item">Цветокоррекция</a>
+                    <a href="#" class="post-prod__nav-item">Видеомонтаж</a><a href="#" class="post-prod__nav-item">Цветокоррекция</a>
                 </div>
                 <hr class="sep">
                 <div class="post-prod__nav-items">
-                    <a href="#visuals" class="post-prod__nav-item">Визуальные эффекты</a><a href="#sounds" class="post-prod__nav-item">Монтаж звука</a>
+                    <a href="#" class="post-prod__nav-item">Визуальные<br>эффекты</a><a href="#" class="post-prod__nav-item">Монтаж звука</a>
                 </div>
+            </div>
+            <div class="header__media">
+                <a href="#" class="media-item">
+                    <img src="images/icons/vk-white.png" alt="vk">
+                </a>
+                <a href="#" class="media-item">
+                    <img src="images/icons/insta-white.png" alt="insta">
+                </a>
+                <a href="#" class="media-item">
+                    <img src="images/icons/youtube-white.png" alt="youtube">
+                </a>
             </div>
             <div class="header-right__circle"></div>
         </div>

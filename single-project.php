@@ -6,6 +6,7 @@
 	<title>ВиКино</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="icon" href="images/logo.png">
     <script src="js/jquery.js" defer></script>
     <script src="js/single-project.js" defer></script>
     <script src="js/jquery-ui.min.js" defer></script>

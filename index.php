@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ВиКино</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="images/logo.png">
+	<script src="js/jquery.js" defer></script>
+	<script src="js/jquery-ui.min.js" defer></script>
+	<script src="js/index.js" defer></script>
 </head>
 <body>
 <div class="cover cover-left"></div>
@@ -35,7 +39,18 @@
 			<button class="header__form-button">Отправить</button>
 		</form>
 	</div>
-	<div class="header__right">
+	<div class="header__right index__right">
+		<div class="header__media">
+			<a href="#" class="media-item">
+				<img src="images/icons/vk-white.png" alt="vk">
+			</a>
+			<a href="#" class="media-item">
+				<img src="images/icons/insta-white.png" alt="insta">
+			</a>
+			<a href="#" class="media-item">
+				<img src="images/icons/youtube-white.png" alt="youtube">
+			</a>
+		</div>
 		<div class="header-right__circle"></div>
 	</div>
 </header>		
@@ -119,39 +134,51 @@
 					</div>
 					<div class="works__items-wp">
 						<div class="works__item polygon">
-							<img src="images/products/product1.jpg" alt="filming people" class="works__item-img">
-							<div class="works__item-title-wp">
-								<h3 class="works__item-title">Рекламные ролики</h3>
+							<div class="works__item-content">
+								<img src="images/products/product1.jpg" alt="filming people" class="works__item-img">
+								<div class="works__item-title-wp">
+									<h3 class="works__item-title">Рекламные ролики</h3>
+								</div>
 							</div>
 						</div>
 						<div class="works__item polygon">
-							<img src="images/products/product2.png" alt="filming people" class="works__item-img">
-							<div class="works__item-title-wp">
-								<h3 class="works__item-title">Музыкальные видео</h3>
+							<div class="works__item-content">
+								<img src="images/products/product2.png" alt="filming people" class="works__item-img">
+								<div class="works__item-title-wp">
+									<h3 class="works__item-title">Музыкальные видео</h3>
+								</div>
 							</div>
 						</div>
 						<div class="works__item polygon">
-							<img src="images/products/product3.jpeg" alt="filming people" class="works__item-img">
-							<div class="works__item-title-wp">
-								<h3 class="works__item-title">Телесериалы</h3>
+							<div class="works__item-content">
+								<img src="images/products/product3.jpeg" alt="filming people" class="works__item-img">
+								<div class="works__item-title-wp">
+									<h3 class="works__item-title">Телесериалы</h3>
+								</div>
 							</div>
 						</div>
 						<div class="works__item polygon">
-							<img src="images/products/product4.jpg" alt="filming people" class="works__item-img">
-							<div class="works__item-title-wp">
-								<h3 class="works__item-title">Фильмы</h3>
+							<div class="works__item-content">
+								<img src="images/products/product4.jpg" alt="filming people" class="works__item-img">
+								<div class="works__item-title-wp">
+									<h3 class="works__item-title">Фильмы</h3>
+								</div>
 							</div>
 						</div>
 						<div class="works__item polygon">
-							<img src="images/products/product5.jpg" alt="filming people" class="works__item-img">
-							<div class="works__item-title-wp works__item-title_small">
-								<h3 class="works__item-title works__item-title_small">Мультипликация</h3>
+							<div class="works__item-content">
+								<img src="images/products/product5.jpg" alt="filming people" class="works__item-img">
+								<div class="works__item-title-wp works__item-title_small">
+									<h3 class="works__item-title works__item-title_small">Мультипликация</h3>
+								</div>
 							</div>
 						</div>
 						<div class="works__item polygon">
-							<img src="images/products/product6.jpg" alt="filming people" class="works__item-img">
-							<div class="works__item-title-wp">
-								<h3 class="works__item-title">Социальная реклама</h3>
+							<div class="works__item-content">
+								<img src="images/products/product6.jpg" alt="filming people" class="works__item-img">
+								<div class="works__item-title-wp">
+									<h3 class="works__item-title">Социальная реклама</h3>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -196,5 +223,185 @@
 	</section>
 </main>
 <?php include "includes/footer.php" ?>
+<div class="works__item-modal">
+	<div class="modal__overlay">
+	</div>
+	<div class="modal__content">
+		<span class="modal__close">&times;</span>
+		<div class="section__title-wp modal__title-wp">
+			<h2 class="section__title">Рекламные ролики</h2>
+		</div>
+		<p class="modal__text">
+			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
+		</p>
+		<ul class="modal__list modal__text">
+			<li>Строительство декораций любых сложностей</li>
+			<li>Применения самой современной техники киносъемки</li>
+			<li>Дикторы  со всего мира</li>
+		</ul>
+		<div class="modal__imgs">
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+		</div>
+		<a href="#" class="modal__more modal__text">Узнать больше</a>
+	</div>
+</div>
+<div class="works__item-modal">
+	<div class="modal__overlay">
+	</div>
+	<div class="modal__content">
+		<span class="modal__close">&times;</span>
+		<div class="section__title-wp modal__title-wp">
+			<h2 class="section__title">Что мы снимаем</h2>
+		</div>
+		<p class="modal__text">
+			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
+		</p>
+		<ul>
+			<li>Строительство декораций любых сложностей</li>
+			<li>Применения самой современной техники киносъемки</li>
+			<li>Дикторы  со всего мира</li>
+		</ul>
+		<div class="modal__imgs">
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+		</div>
+		<a href="#" class="modal__more">Узнать больше</a>
+	</div>
+</div>
+<div class="works__item-modal">
+	<div class="modal__overlay">
+	</div>
+	<div class="modal__content">
+		<span class="modal__close">&times;</span>
+		<div class="section__title-wp modal__title-wp">
+			<h2 class="section__title">Что мы снимаем</h2>
+		</div>
+		<p class="modal__text">
+			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
+		</p>
+		<ul>
+			<li>Строительство декораций любых сложностей</li>
+			<li>Применения самой современной техники киносъемки</li>
+			<li>Дикторы  со всего мира</li>
+		</ul>
+		<div class="modal__imgs">
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+		</div>
+		<a href="#" class="modal__more">Узнать больше</a>
+	</div>
+</div>
+<div class="works__item-modal">
+	<div class="modal__overlay">
+	</div>
+	<div class="modal__content">
+		<span class="modal__close">&times;</span>
+		<div class="section__title-wp modal__title-wp">
+			<h2 class="section__title">Что мы снимаем</h2>
+		</div>
+		<p class="modal__text">
+			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
+		</p>
+		<ul>
+			<li>Строительство декораций любых сложностей</li>
+			<li>Применения самой современной техники киносъемки</li>
+			<li>Дикторы  со всего мира</li>
+		</ul>
+		<div class="modal__imgs">
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+		</div>
+		<a href="#" class="modal__more">Узнать больше</a>
+	</div>
+</div>
+<div class="works__item-modal">
+	<div class="modal__overlay">
+	</div>
+	<div class="modal__content">
+		<span class="modal__close">&times;</span>
+		<div class="section__title-wp modal__title-wp">
+			<h2 class="section__title">Что мы снимаем</h2>
+		</div>
+		<p class="modal__text">
+			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
+		</p>
+		<ul>
+			<li>Строительство декораций любых сложностей</li>
+			<li>Применения самой современной техники киносъемки</li>
+			<li>Дикторы  со всего мира</li>
+		</ul>
+		<div class="modal__imgs">
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+		</div>
+		<a href="#" class="modal__more">Узнать больше</a>
+	</div>
+</div>
+<div class="works__item-modal">
+	<div class="modal__overlay">
+	</div>
+	<div class="modal__content">
+		<span class="modal__close">&times;</span>
+		<div class="section__title-wp modal__title-wp">
+			<h2 class="section__title">Что мы снимаем</h2>
+		</div>
+		<p class="modal__text">
+			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
+		</p>
+		<ul>
+			<li>Строительство декораций любых сложностей</li>
+			<li>Применения самой современной техники киносъемки</li>
+			<li>Дикторы  со всего мира</li>
+		</ul>
+		<div class="modal__imgs">
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+		</div>
+		<a href="#" class="modal__more">Узнать больше</a>
+	</div>
+</div>
 </body>
 </html>

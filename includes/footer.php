@@ -18,10 +18,10 @@
                     <div class="footer__nav-wp">
                         <h3 class="footer__nav-title">Фильмы</h3>
                         <ul class="footer__nav">
-                            <li class="footer__nav-item"><a href="#">Документальные</a></li>
-                            <li class="footer__nav-item"><a href="#">Художественные</a></li>
-                            <li class="footer__nav-item"><a href="#">Короткометражные</a></li>
-                            <li class="footer__nav-item"><a href="#">Анимационные</a></li>
+                            <li class="footer__nav-item"><a href="/projects.php">Документальные</a></li>
+                            <li class="footer__nav-item"><a href="/projects.php">Художественные</a></li>
+                            <li class="footer__nav-item"><a href="/projects.php">Короткометражные</a></li>
+                            <li class="footer__nav-item"><a href="/projects.php">Анимационные</a></li>
                         </ul>
                     </div>
                 </div>

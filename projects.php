@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ВиКино</title>
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png">
     <script src="js/projects.js" defer></script>
 </head>
 <body>
@@ -12,30 +13,18 @@
 <div class="cover cover-right"></div>
 <header class="header">
 	<?php include 'includes/header-top.php' ?>
-	<div class="header__left">
+	<div class="header__left projects__left">
+        <div class="header__left-logo">
+            <img src="images/logo-projects.png" alt="vicinema">
+        </div>
 		<div class="header__left-title-wp">
 			<div class="header__left-title-in">
 				<img class="header-title" src="images/projects-title.png" alt="projects">
 			</div>
 		</div>
-		<form method="post" class="header__left-form-wp polygon">
-			<p class="header__form-text">Проконсультируем и бесплатно предложим идеи. Заполните форму и мы свяжемся с вами</p>
-			<label for="name" class="header__form-item-wp">
-				<img src="images/icons/person.png" alt="person" class="header__form-item-icon">
-				<input type="text" placeholder="Имя" class="header__form-item-input">
-			</label>
-			<label for="name" class="header__form-item-wp">
-				<img src="images/icons/mail.png" alt="mail" class="header__form-item-icon">
-				<input type="text" placeholder="E-mail" class="header__form-item-input">
-			</label>
-			<label for="name" class="header__form-item-wp">
-				<img src="images/icons/phone.png" alt="phone" class="header__form-item-icon">
-				<input type="text" placeholder="Телефон" class="header__form-item-input">
-			</label>
-			<button class="header__form-button">Отправить</button>
-		</form>
 	</div>
-	<div class="header__right">
+	<div class="header__right projects__right">
+        <div class="projects__right-bg"></div>
 	</div>
 </header>		
 <main class="main">
