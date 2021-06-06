@@ -1,3 +1,11 @@
+<?php
+    include 'config.php';
+
+    $movieId = $_GET['movie'];
+    $selectedMovie = $mysqli->query("SELECT * FROM movies WHERE ID=$movieId")->fetch_array();
+    $movieTrailer = str_replace('watch?v=', 'embed/', $selectedMovie['trailer']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +26,13 @@
 	<?php include 'includes/header-top.php' ?>
 	<div class="header__left single-project__left" style="background: linear-gradient(180deg, #5E5591 0%, #973E95 100%);">
 		<div class="single-project__poster">
-            <img src="images/catalog/item1.jpg" alt="">
+            <img src="<?=$selectedMovie['small_poster']?>" alt="<?=$selectedMovie['title']?>">
         </div>
         <div class="single-project__trailer">
             <iframe 
                 width="342" 
                 height="204" 
-                src="https://www.youtube.com/embed/QfctZceL6mw" 
+                src="<?=$movieTrailer?>" 
                 title="YouTube video player" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -37,30 +45,27 @@
             </svg>
         </div>
 	</div>
-	<div class="header__right single-project__right" style="background-image: url('images/single-project/project1.png')">
+	<div class="header__right single-project__right" style="background-image: url(<?=$selectedMovie['big_poster']?>)">
 		<div class="single-project__desc">
             <div class="section__title-wp single-project__title-wp">
-                <h2 class="section__title">BTS: Разбей тишину: Фильм</h2>
+                <h2 class="section__title"><?=$selectedMovie['title']?></h2>
             </div>
             <p class="single-project__text">
-                Южная Корея | 2020 | музыка, документальный, концерт
+                <?=$selectedMovie['country']?> | <?=$selectedMovie['year']?> | <?=$selectedMovie['genre']?>
             </p>
             <p class="single-project__text">
-                Кинопоиск: 8,1
+                Кинопоиск: <?=$selectedMovie['rating']?>
+            </p>
+            <?php 
+                $plot = explode(PHP_EOL, $selectedMovie['plot']);
+                foreach ($plot as $paragraph) { ?>
+                    <p class="single-project__text"><?=$paragraph?></p>
+                <?php } ?>
+            <p class="single-project__text">
+                Режиссер: <?=$selectedMovie['director']?>
             </p>
             <p class="single-project__text">
-                После завершения мирового тура «Love Yourself: Speak Yourself» BTS попали в топ чарта Billboard Boxscore и стали первой корейской группой в истории, 
-                выступившей на стадионе Уэмбли в Лондоне. В рамках тура концерты прошли в Лос-Анджелесе, Чикаго, Нью-Йорке, Сан-Паулу, Лондоне, Париже, Осаке, Сидзуоке, Эр-Рияде и Сеуле.
-            </p>
-            <p class="single-project__text">
-                Этот документальный фильм дает доступ к кадрам за сценой, следуя шаг за шагом с участниками группы по всем городам тура. 
-                За кулисами BTS предстанут c новой стороны. Участники коллектива откровенно делятся личными историями, которые до этого никогда не произносились вслух.
-            </p>
-            <p class="single-project__text">
-                Режиссер: Пак Чун-су
-            </p>
-            <p class="single-project__text">
-                В главных ролях: Bangtan Boys, Чон Хо-сок, Чон Джон-гук, Ким Нам-джун, Ким Сок-чин, Ким Тхэ-хён, Мин Юн-ги, Пак Чи-мин
+                В главных ролях: <?=$selectedMovie['actors']?>
             </p>
         </div>
 	</div>

@@ -25,3 +25,13 @@ $('.works__item').on('click', (e) => {
     })
     $('body').css('overflow', 'hidden')
 })
+
+let names = document.querySelectorAll('.workers__about-wp')
+
+names.forEach((item) => {
+    item.style.left = `-${item.offsetWidth - item.offsetWidth * .55}px`
+    item.style.top = `${item.offsetWidth - item.offsetWidth * .55}px`
+    console.log(item.offsetWidth)
+})
+
+console.log(names)

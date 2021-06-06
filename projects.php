@@ -1,3 +1,25 @@
+<?php 
+include 'config.php';
+
+$selectCategories = $mysqli->query("SELECT * FROM categories");
+$categories = [];
+while($item = $selectCategories->fetch_array()) {
+    array_push($categories, $item);
+}
+
+$movies = [];
+foreach ($categories as $category) {
+    $thisCategory = $category['ID'];
+    $selectMovies = $mysqli->query("SELECT `movies`.* FROM `categories` LEFT JOIN `movies` ON `movies`.`id_category` = `categories`.`ID` WHERE (`categories`.`ID` = $thisCategory) ");
+    $categoryMovies = [];
+    while($item = $selectMovies->fetch_array()) {
+        array_push($categoryMovies, $item);
+    }
+    array_push($movies, $categoryMovies);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +28,8 @@
 	<title>ВиКино</title>
 	<link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/logo.png">
+    <script src="js/jquery.js" defer></script>
+	<script src="js/jquery-ui.min.js" defer></script>
     <script src="js/projects.js" defer></script>
 </head>
 <body>
@@ -36,147 +60,28 @@
                 </div>
                 <div class="catalog__content">
                     <div class="catalog__nav">
-                        <a href="#catalog1" class="catalog__nav-item catalog__nav-item_active">Документальные</a>
-                        <a href="#catalog2" class="catalog__nav-item">Художественные</a>
-                        <a href="#catalog3" class="catalog__nav-item">Короткометражные</a>
-                        <a href="#catalog4" class="catalog__nav-item">Анимационные</a>
+                        <?php 
+                            foreach ($categories as $category) {
+                        ?>
+                            <a class="catalog__nav-item"><?=$category['category']?></a>
+                        <?php } ?>
                     </div>
-                    <div id="catalog1" class="catalog__items catalog__items_active">
-                        <div class="catalog__item">
-                            <a href="/single-project.php" class="catalog__item-link"></a>
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item1.jpg" alt="">
-                                <span class="catalog__item-rating">8.1</span>
-                            </div>
-                            <h3 class="catalog__item-title">BTS: Разбей тишину</h3>
-                            <p class="catalog__item-info">2020, музыка, документальный</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item2.jpg" alt="">
-                                <span class="catalog__item-rating">6.7</span>
-                            </div>
-                            <h3 class="catalog__item-title">Мосул</h3>
-                            <p class="catalog__item-info">2020, военный, документальный, боевик</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item3.jpg" alt="">
-                                <span class="catalog__item-rating">7.7</span>
-                            </div>
-                            <h3 class="catalog__item-title">Blackpink: Зажги небо</h3>
-                            <p class="catalog__item-info">2020, музыка, документальный</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item4.jpg" alt="">
-                                <span class="catalog__item-rating">7.6</span>
-                            </div>
-                            <h3 class="catalog__item-title">Бумажный дом</h3>
-                            <p class="catalog__item-info">2020, документальный</p>
-                        </div>
-                    </div>
-                    <div id="catalog2" class="catalog__items">
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item1.jpg" alt="">
-                                <span class="catalog__item-rating">8.1</span>
-                            </div>
-                            <h3 class="catalog__item-title">BTS: Разбей тишину</h3>
-                            <p class="catalog__item-info">2020, музыка, документальный</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item2.jpg" alt="">
-                                <span class="catalog__item-rating">6.7</span>
-                            </div>
-                            <h3 class="catalog__item-title">Мосул</h3>
-                            <p class="catalog__item-info">2020, военный, документальный, боевик</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item3.jpg" alt="">
-                                <span class="catalog__item-rating">7.7</span>
-                            </div>
-                            <h3 class="catalog__item-title">Blackpink: Зажги небо</h3>
-                            <p class="catalog__item-info">2020, музыка, документальный</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item4.jpg" alt="">
-                                <span class="catalog__item-rating">7.6</span>
-                            </div>
-                            <h3 class="catalog__item-title">Бумажный дом</h3>
-                            <p class="catalog__item-info">2020, документальный</p>
-                        </div>
-                    </div>
-                    <div id="catalog3" class="catalog__items">
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item1.jpg" alt="">
-                                <span class="catalog__item-rating">8.1</span>
-                            </div>
-                            <h3 class="catalog__item-title">BTS: Разбей тишину</h3>
-                            <p class="catalog__item-info">2020, музыка, документальный</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item2.jpg" alt="">
-                                <span class="catalog__item-rating">6.7</span>
-                            </div>
-                            <h3 class="catalog__item-title">Мосул</h3>
-                            <p class="catalog__item-info">2020, военный, документальный, боевик</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item3.jpg" alt="">
-                                <span class="catalog__item-rating">7.7</span>
-                            </div>
-                            <h3 class="catalog__item-title">Blackpink: Зажги небо</h3>
-                            <p class="catalog__item-info">2020, музыка, документальный</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item4.jpg" alt="">
-                                <span class="catalog__item-rating">7.6</span>
-                            </div>
-                            <h3 class="catalog__item-title">Бумажный дом</h3>
-                            <p class="catalog__item-info">2020, документальный</p>
-                        </div>
-                    </div>
-                    <div id="catalog4" class="catalog__items">
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item1.jpg" alt="">
-                                <span class="catalog__item-rating">8.1</span>
-                            </div>
-                            <h3 class="catalog__item-title">BTS: Разбей тишину</h3>
-                            <p class="catalog__item-info">2020, музыка, документальный</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item2.jpg" alt="">
-                                <span class="catalog__item-rating">6.7</span>
-                            </div>
-                            <h3 class="catalog__item-title">Мосул</h3>
-                            <p class="catalog__item-info">2020, военный, документальный, боевик</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item3.jpg" alt="">
-                                <span class="catalog__item-rating">7.7</span>
-                            </div>
-                            <h3 class="catalog__item-title">Blackpink: Зажги небо</h3>
-                            <p class="catalog__item-info">2020, музыка, документальный</p>
-                        </div>
-                        <div class="catalog__item">
-                            <div class="catalog__item-poster">
-                                <img src="images/catalog/item4.jpg" alt="">
-                                <span class="catalog__item-rating">7.6</span>
-                            </div>
-                            <h3 class="catalog__item-title">Бумажный дом</h3>
-                            <p class="catalog__item-info">2020, документальный</p>
-                        </div>
+                    <?php 
+                        foreach ($movies as $categoryMovie) { ?>
+                            <div class="catalog__items">
+                                <?php foreach ($categoryMovie as $movie) { ?>
+                                    <div class="catalog__item">
+                                        <a href="/single-project.php?movie=<?=$movie['ID']?>" class="catalog__item-link"></a>
+                                        <div class="catalog__item-poster">
+                                            <img src="<?=$movie['small_poster']?>" alt="<?=$movie['title']?>">
+                                            <span class="catalog__item-rating"><?=$movie['rating']?></span>
+                                        </div>
+                                        <h3 class="catalog__item-title"><?=$movie['title']?></h3>
+                                        <p class="catalog__item-info"><?=$movie['year']?>, <?=$movie['genre']?></p>
+                                    </div>
+                                <?php } ?> 
+                            </div> 
+                        <?php } ?>
                     </div>
                 </div>
             </div>

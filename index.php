@@ -1,3 +1,21 @@
+<?php 
+
+include 'config.php';
+
+$selectClients = $mysqli->query("SELECT * FROM clients");
+$clients = [];
+while ($item = $selectClients->fetch_array()) {
+	array_push($clients, $item);
+}
+
+$selectWorkers = $mysqli->query("SELECT * FROM workers");
+$workers = [];
+while ($item = $selectWorkers->fetch_array()) {
+	array_push($workers, $item);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,10 +95,13 @@
 					<h2 class="section__title">Наши клиенты</h2>
 				</div>
 				<div class="clients__items-wp">
-					<div class="clients__item-wp"><img src="images/clients/client1.jpg" alt="netflix" class="clients__img"></div>
-					<div class="clients__item-wp"><img src="images/clients/client2.jpg" alt="hbo" class="clients__img"></div>
-					<div class="clients__item-wp"><img src="images/clients/client3.jpg" alt="bbc" class="clients__img"></div>
-					<div class="clients__item-wp"><img src="images/clients/client4.jpg" alt="abc" class="clients__img"></div>
+					<?php 
+						foreach ($clients as $client) {
+					?>
+						<div class="clients__item-wp">
+							<img src="<?=$client['image']?>" alt="<?=$client['name']?>" class="clients__img">
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
@@ -90,36 +111,20 @@
 			<div class="container">
 				<div class="section__in workers__in">
 					<div class="workers__items-wp">
-						<div class="workers__item-wp">
-							<div class="workers__item polygon">
-								<img src="images/workers/worker1.png" alt="Dmitry" class=" workers__img workers__img1">
+						<?php 
+							foreach ($workers as $worker) {
+						?>
+							<div class="workers__item-wp">
+								<div class="workers__item polygon">
+									<img src="<?=$worker['image']?>" alt="<?=$worker['name']?>" class="workers__img">
+								</div>
+								<div class="workers__position-wp"><span class="workers__position"><?=$worker['position']?></span></div>
+								<div class="workers__about-wp workers__about-wp1">
+									<div class="workers__exp">Стаж <?=$worker['exp']?> лет</div>
+									<div class="workers__name"><?=$worker['name']?></div>
+								</div>
 							</div>
-							<div class="workers__position-wp"><span class="workers__position">Кинооператор</span></div>
-							<div class="workers__about-wp workers__about-wp1">
-								<div class="workers__exp">Стаж 6 лет</div>
-								<div class="workers__name">Дмитрий</div>
-							</div>
-						</div>
-						<div class="workers__item-wp">
-							<div class="workers__item workers__item_white polygon">
-								<img src="images/workers/worker2.png" alt="Sergey" class=" workers__img workers__img2">
-							</div>
-							<div class="workers__position-wp workers__position-wp_white"><span class="workers__position">Главный режиссер</span></div>
-							<div class="workers__about-wp workers__about-wp2">
-								<div class="workers__exp">Стаж 11 лет</div>
-								<div class="workers__name">Сергей</div>
-							</div>
-						</div>
-						<div class="workers__item-wp">
-							<div class="workers__item polygon">
-								<img src="images/workers/worker3.png" alt="Mihail" class=" workers__img workers__img3">
-							</div>
-							<div class="workers__position-wp"><span class="workers__position">Режиссер монтажа</span></div>
-							<div class="workers__about-wp workers__about-wp3">
-								<div class="workers__exp">Стаж 8 лет</div>
-								<div class="workers__name">Михаил</div>
-							</div>
-						</div>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
