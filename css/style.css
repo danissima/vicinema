@@ -1147,7 +1147,6 @@ body {
 	top: 480px;
 	right: -45px;
 	z-index: 1;
-	background-color: #BFC5E6;
 	cursor: pointer;
 }
 
@@ -1188,6 +1187,11 @@ body {
 	text-align: center;
 	font-size: 46px;
 	margin-bottom: 20px;
+	color: #FF3142;
+}
+
+.admin__section + .admin__section {
+	margin-top: 70px;
 }
 
 .admin__subtitle {
@@ -1196,11 +1200,19 @@ body {
 	margin-bottom: 50px;
 }
 
-.admin__main .section__title {
+.admin__main .section__title-wp {
 	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
 }
+
+.admin-section__workers {
+	display: flex;
+	justify-content: space-between;
+}
+
 .admin-section__worker + .admin-section__worker {
-	margin-top: 30px;
+	margin-left: 30px;
 }
 
 .admin-section__subtitle {
@@ -1208,11 +1220,193 @@ body {
 	margin-bottom: 20px;
 }
 
+.admin-section__input-wp {
+	display: flex;
+	flex-direction: column;
+}
+
+.admin-section__input-wp + .admin-section__input-wp {
+	margin-top: 20px;
+}
+
+.admin-section__input-wp span {
+	margin-bottom: 5px;
+}
+
+.admin-section__input-wp span a {
+	color: #E43F4D;
+}
+
+.admin-section__input-wp span a:hover {
+	text-decoration: underline;
+}
+
 .admin-section__input {
 	padding: 10px;
 	border-radius: 5px;
 	outline: none;
-	font-size: 28px;
-	margin: 10px;
+	font-size: 24px;
 	font-family: 'Montserrat', sans-serif;
+	transition: border-color .2s ease-out;
+}
+
+.admin-section__input:focus {
+	border-color: #E43F4D;
+}
+
+
+.admin-section__button {
+	background-color: #333;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	border: none;
+	color: #fff;
+	padding: 9px 20px;
+	margin: 0 auto;
+	cursor: pointer;
+	margin-top: 20px;
+	border-radius: 100px;
+	transition: background-color .3s ease-out;
+}
+
+.admin-section__button:hover {
+	background-color: #E43F4D;
+
+}
+
+.admin-section__clients {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 50px;
+}
+
+.admin-section__client {
+	position: relative;
+}
+
+.admin-section__movies-inputs {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+}
+
+.admin-section__movies-inputs .admin-section__input-wp {
+	margin-top: 0;
+}
+
+.admin-section__textarea {
+	resize: vertical;
+	font-size: 20px;
+	height: 280px;
+}
+
+.admin-section__movie {
+	position: relative;
+}
+
+.admin-section__movie + .admin-section__movie {
+	margin-top: 50px;
+}
+
+.admin-section__colors {
+	height: 100%;
+	display: flex;
+	align-items: center;
+
+}
+
+.admin-section__input-color {
+	margin-right: 20px;
+	height: 40px;
+}
+
+.admin-section__flex {
+	flex-direction: row;
+}
+
+.admin-section__flex > div {
+	margin-right: 20px;
+}
+
+.movies__button {
+	margin-top: 30px;
+}
+
+.add__btn {
+	margin-left: 30px;
+	border-radius: 100px;
+	background-color: #333;
+	font-size: 40px;
+	cursor: pointer;
+	color: #fff;
+	display: inline-block;
+	width: 49px;
+	text-align: center;
+	transition: background-color .3s ease-out;
+}
+
+.add__btn:hover {
+	background-color: #E43F4D;
+}
+
+.admin-section__movie-template {
+	display: none;
+}
+
+.admin-section__movie-template_show {
+	display: block;
+}
+
+.admin-section__form-delete {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.admin-section__client-template {
+	display: none;
+}
+
+.admin-section__client-template_show {
+	display: block;
+}
+
+.admin__nav {
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	font-size: 18px;
+	margin-bottom: 40px;
+}
+
+.admin__nav li {
+	margin-top: 5px;
+	font-size: 15px;
+}
+
+.admin__nav li a {
+	color:#E43F4D;
+}
+
+.admin__nav li a:hover {
+	text-decoration: underline;
+}
+
+.auth {
+	background-color: #f0f0f0;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.authFrom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.authFrom input {
+	margin-top: 10px;
 }
