@@ -338,6 +338,13 @@ body {
 	background-repeat: no-repeat;
 }
 
+.header__camera {
+	cursor: pointer;
+	position: absolute;
+	bottom: -69px;
+	right: 20%;
+}
+
 .index__right {
 	background-image: url('../images/bgs/index-header.png');
 	background-position: center right -120px;
@@ -440,6 +447,7 @@ body {
 }
 
 .clients__items-wp {
+	height: 200px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 20px;
@@ -456,8 +464,10 @@ body {
 
 .clients__item-wp {
 	width: 295px;
-	height: 190px;
+	height: 190px !important;
+	object-fit: cover;
 	box-shadow: 4px 4px 20px rgba(228, 63, 77, .8);
+	margin: 0 20px;
 }
 
 .clients__img {
@@ -614,7 +624,7 @@ body {
 
 }
 
-.works__item-modal {
+.works__item-modal, .header__modal {
 	top: 0;
 	left: 0;
 	position: fixed;
@@ -686,6 +696,18 @@ body {
 
 .modal__more:hover {
 	color: #FF4656;
+}
+
+.modal__more img {
+	margin-bottom: -7px;
+}
+
+.modal__imgs {
+	margin-bottom: 20px;
+}
+
+.modal__img {
+	width: 400px;
 }
 
 .works__item-img {
@@ -1409,4 +1431,21 @@ body {
 
 .authFrom input {
 	margin-top: 10px;
+}
+
+.admin-section__feedbacks {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+}
+
+.header__modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.header__modal .modal__content {
+	max-width: 800px;
 }

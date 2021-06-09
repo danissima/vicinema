@@ -24,8 +24,10 @@ while ($item = $selectWorkers->fetch_array()) {
 	<title>ВиКино</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="images/logo.png">
+	<link rel="stylesheet" href="css/slick.css">
 	<script src="js/jquery.js" defer></script>
 	<script src="js/jquery-ui.min.js" defer></script>
+	<script src="js/slick.min.js" defer></script>
 	<script src="js/index.js" defer></script>
 </head>
 <body>
@@ -40,19 +42,20 @@ while ($item = $selectWorkers->fetch_array()) {
 				<img class="title-img" src="images/logo-title.png" alt="vicinema">
 			</div>
 		</div>
-		<form method="post" class="header__left-form-wp polygon">
+		<form action="queries/feedback.php" method="post" class="header__left-form-wp polygon">
+			<input type="hidden" name="feedbackAction" value="insert">
 			<p class="header__form-text">Проконсультируем и бесплатно предложим идеи. Заполните форму и мы свяжемся с вами</p>
 			<label for="name" class="header__form-item-wp">
 				<img src="images/icons/person.png" alt="person" class="header__form-item-icon">
-				<input type="text" placeholder="Имя" class="header__form-item-input">
+				<input required name="feedbackName" type="text" placeholder="Имя" class="header__form-item-input">
 			</label>
 			<label for="name" class="header__form-item-wp">
 				<img src="images/icons/mail.png" alt="mail" class="header__form-item-icon">
-				<input type="text" placeholder="E-mail" class="header__form-item-input">
+				<input required name="feedbackMail" type="email" placeholder="E-mail" class="header__form-item-input">
 			</label>
 			<label for="name" class="header__form-item-wp">
 				<img src="images/icons/phone.png" alt="phone" class="header__form-item-icon">
-				<input type="text" placeholder="Телефон" class="header__form-item-input">
+				<input required name="feedbackPhone" type="text" placeholder="Телефон" class="header__form-item-input">
 			</label>
 			<button class="header__form-button">Отправить</button>
 		</form>
@@ -66,11 +69,15 @@ while ($item = $selectWorkers->fetch_array()) {
 				<img src="images/icons/insta-white.png" alt="insta">
 			</a>
 			<a href="#" class="media-item">
-				<img src="images/icons/youtube-white.png" alt="youtube">
+				<img src="images/icons/youtube-white.png" alt="	tube">
 			</a>
 		</div>
 		<div class="header-right__circle"></div>
+		<div class="header__camera">
+			<img src="images/camera.png" alt="camera">
+		</div>
 	</div>
+	
 </header>		
 <main class="main">
 	<section class="about-us">
@@ -246,16 +253,25 @@ while ($item = $selectWorkers->fetch_array()) {
 		</ul>
 		<div class="modal__imgs">
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img1.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img2.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img3.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img4.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img5.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img6.png" alt="item"></a>
 			</div>
 		</div>
-		<a href="#" class="modal__more modal__text">Узнать больше</a>
+		<a href="#" class="modal__more modal__text">Больше роликов на нашем YouTube канале: <img src="images/icons/youtube-red.png" alt="youtube"></a>
 	</div>
 </div>
 <div class="works__item-modal">
@@ -264,12 +280,73 @@ while ($item = $selectWorkers->fetch_array()) {
 	<div class="modal__content">
 		<span class="modal__close">&times;</span>
 		<div class="section__title-wp modal__title-wp">
-			<h2 class="section__title">Что мы снимаем</h2>
+			<h2 class="section__title">Музыкальные видео</h2>
+		</div>
+		<p class="modal__text">
+			Музыка и видео совмещаясь образуют новый вид искусства, воздействуя на зрителя с утроенной силой:
+		</p>
+		<ul class="modal__list modal__text">
+			<li>Музыкальные клипы</li>
+			<li>Концерты и музыкальные постановки</li>
+			<li>Прямые эфиры для исполнителей.</li>
+		</ul>
+		<div class="modal__imgs">
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+		</div>
+		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале</a>
+	</div>
+</div>
+<div class="works__item-modal">
+	<div class="modal__overlay">
+	</div>
+	<div class="modal__content">
+		<span class="modal__close">&times;</span>
+		<div class="section__title-wp modal__title-wp">
+			<h2 class="section__title">Телесериалы</h2>
+		</div>
+		<p class="modal__text">
+			Самый популярный вид телеискусства. Так же он привлекаем тем, что при большом количестве серий стоимость одной серии незначительна. Форматы:
+		</p>
+		<ul class="modal__list modal__text">
+			<li>Художественные телесериалы</li>
+			<li>Документальные сериалы</li>
+			<li>Короткометражные сериалы для интернета</li>
+			<li>Павильонные ситкомы</li>
+		</ul>
+		<div class="modal__imgs">
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+			<div class="modal__img">
+				<img src="" alt="">
+			</div>
+		</div>
+		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале</a>
+	</div>
+</div>
+<div class="works__item-modal">
+	<div class="modal__overlay">
+	</div>
+	<div class="modal__content">
+		<span class="modal__close">&times;</span>
+		<div class="section__title-wp modal__title-wp">
+			<h2 class="section__title">Фильмы</h2>
 		</div>
 		<p class="modal__text">
 			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
 		</p>
-		<ul>
+		<ul class="modal__list modal__text">
 			<li>Строительство декораций любых сложностей</li>
 			<li>Применения самой современной техники киносъемки</li>
 			<li>Дикторы  со всего мира</li>
@@ -285,7 +362,7 @@ while ($item = $selectWorkers->fetch_array()) {
 				<img src="" alt="">
 			</div>
 		</div>
-		<a href="#" class="modal__more">Узнать больше</a>
+		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале:</a>
 	</div>
 </div>
 <div class="works__item-modal">
@@ -294,15 +371,15 @@ while ($item = $selectWorkers->fetch_array()) {
 	<div class="modal__content">
 		<span class="modal__close">&times;</span>
 		<div class="section__title-wp modal__title-wp">
-			<h2 class="section__title">Что мы снимаем</h2>
+			<h2 class="section__title">Мультипликация</h2>
 		</div>
 		<p class="modal__text">
-			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
+			Самый оптимальный формат для широкой аудитории - ярко, нейтрально, интересно.
 		</p>
-		<ul>
-			<li>Строительство декораций любых сложностей</li>
-			<li>Применения самой современной техники киносъемки</li>
-			<li>Дикторы  со всего мира</li>
+		<ul class="modal__list modal__text">
+			<li>Прорисовка персонажей и сюжета</li>
+			<li>Возможности озвучивать на любые языки</li>
+			<li>Легкая актуализация через год и более</li>
 		</ul>
 		<div class="modal__imgs">
 			<div class="modal__img">
@@ -315,7 +392,7 @@ while ($item = $selectWorkers->fetch_array()) {
 				<img src="" alt="">
 			</div>
 		</div>
-		<a href="#" class="modal__more">Узнать больше</a>
+		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале:</a>
 	</div>
 </div>
 <div class="works__item-modal">
@@ -324,15 +401,15 @@ while ($item = $selectWorkers->fetch_array()) {
 	<div class="modal__content">
 		<span class="modal__close">&times;</span>
 		<div class="section__title-wp modal__title-wp">
-			<h2 class="section__title">Что мы снимаем</h2>
+			<h2 class="section__title">Социальная реклама</h2>
 		</div>
 		<p class="modal__text">
-			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
+			Наиболее актуальный формат для благо-творительных организаций, между-народных фондов и проектов ООН:
 		</p>
-		<ul>
-			<li>Строительство декораций любых сложностей</li>
-			<li>Применения самой современной техники киносъемки</li>
-			<li>Дикторы  со всего мира</li>
+		<ul class="modal__list modal__text">
+			<li>На документальных кадрах</li>
+			<li>С привлечением актёров</li>
+			<li>С привлечением звёзд кино, шоу-бизнеса, спорта</li>
 		</ul>
 		<div class="modal__imgs">
 			<div class="modal__img">
@@ -345,10 +422,11 @@ while ($item = $selectWorkers->fetch_array()) {
 				<img src="" alt="">
 			</div>
 		</div>
-		<a href="#" class="modal__more">Узнать больше</a>
+		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале:</a>
 	</div>
 </div>
-<div class="works__item-modal">
+
+<div class="header__modal">
 	<div class="modal__overlay">
 	</div>
 	<div class="modal__content">
@@ -356,56 +434,15 @@ while ($item = $selectWorkers->fetch_array()) {
 		<div class="section__title-wp modal__title-wp">
 			<h2 class="section__title">Что мы снимаем</h2>
 		</div>
-		<p class="modal__text">
-			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
-		</p>
-		<ul>
-			<li>Строительство декораций любых сложностей</li>
-			<li>Применения самой современной техники киносъемки</li>
-			<li>Дикторы  со всего мира</li>
-		</ul>
-		<div class="modal__imgs">
-			<div class="modal__img">
-				<img src="" alt="">
-			</div>
-			<div class="modal__img">
-				<img src="" alt="">
-			</div>
-			<div class="modal__img">
-				<img src="" alt="">
-			</div>
-		</div>
-		<a href="#" class="modal__more">Узнать больше</a>
-	</div>
-</div>
-<div class="works__item-modal">
-	<div class="modal__overlay">
-	</div>
-	<div class="modal__content">
-		<span class="modal__close">&times;</span>
-		<div class="section__title-wp modal__title-wp">
-			<h2 class="section__title">Что мы снимаем</h2>
-		</div>
-		<p class="modal__text">
-			Для воплощения самых смелых идей мы готовы привлекать к съемкам самых лучших представителей индустрии. Наши преимущества:
-		</p>
-		<ul>
-			<li>Строительство декораций любых сложностей</li>
-			<li>Применения самой современной техники киносъемки</li>
-			<li>Дикторы  со всего мира</li>
-		</ul>
-		<div class="modal__imgs">
-			<div class="modal__img">
-				<img src="" alt="">
-			</div>
-			<div class="modal__img">
-				<img src="" alt="">
-			</div>
-			<div class="modal__img">
-				<img src="" alt="">
-			</div>
-		</div>
-		<a href="#" class="modal__more">Узнать больше</a>
+		<iframe 
+			width="342" 
+			height="204" 
+			src="https://www.youtube.com/embed/QDYifetF7ss" 
+			title="YouTube video player" 
+			frameborder="0" 
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+			allowfullscreen>
+		</iframe>
 	</div>
 </div>
 </body>

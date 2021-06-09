@@ -1,3 +1,4 @@
+
 $('.works__item').on('click', (e) => {
     let thisItem = e.currentTarget
     let thisItemIndex = $('.works__item').index(thisItem)
@@ -11,6 +12,10 @@ $('.works__item').on('click', (e) => {
         }
     })
     thisModal.css('display', 'flex')
+    $('.modal__imgs').slick({
+        slidesToShow: 3,
+        arrows: false,
+    })
     thisModalClose.on('click', () => {
         thisModal.hide({
             effect: 'fade',
@@ -31,7 +36,34 @@ let names = document.querySelectorAll('.workers__about-wp')
 names.forEach((item) => {
     item.style.left = `-${item.offsetWidth - item.offsetWidth * .55}px`
     item.style.top = `${item.offsetWidth - item.offsetWidth * .55}px`
-    console.log(item.offsetWidth)
 })
 
-console.log(names)
+$('.clients__items-wp').slick({
+    slidesToShow: 4,
+    arrows: false,
+});
+
+$('.header__camera').on('click', () => {
+    let thisModal = $('.header__modal')
+    let thisModalClose = $('.header__modal .modal__close')
+    let thisOverlay = $('.header__modal .modal__overlay')
+    thisModal.show({
+        effect: 'fade',
+        complete() {
+            thisModal.css('display', 'flex')
+        }
+    })
+    thisModal.css('display', 'flex')
+    thisModalClose.on('click', () => {
+        thisModal.hide({
+            effect: 'fade',
+        })
+    })
+    thisOverlay.on('click', () => {
+        thisModal.hide({
+            effect: 'fade',
+        })
+    })
+})
+
+

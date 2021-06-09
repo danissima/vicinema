@@ -33,6 +33,12 @@ while($item = $selectCategories->fetch_array()) {
 	array_push($categories, $item);
 }
 
+$selectFeedbacks = $mysqli->query("SELECT * FROM feedback");
+$feedbacks = [];
+while($item = $selectFeedbacks->fetch_array()) {
+	array_push($feedbacks, $item);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +69,39 @@ while($item = $selectCategories->fetch_array()) {
 						<li><a href="#movie<?=$movie['ID']?>"><?=$movie['title']?></a></li>
 					<?php } ?>
 				</ul>
+				<div class="admin__section">
+					<div class="section__title-wp">
+						<h2 class="section__title">Заявки на обратную связь</h2>
+					</div>
+					<div class="admin-section__content">
+						<div class="admin-section__feedbacks">
+							<?php foreach ($feedbacks as $feedback) { ?>
+								<div class="admin-section__feedback">
+									<h3 class="admin-section__subtitle">Заявка</h3>
+									<form method="POST" action="queries/feedback.php" class="admin-section__form">
+										<div class="admin-section__inputs">
+											<input type="hidden" name="feedbackAction" value="delete">
+											<input type="hidden" name="feedbackId" value="<?=$feedback['ID']?>">
+											<div class="admin-section__input-wp">
+												<span>Имя</span>
+												<input class="admin-section__input" value="<?=$feedback['name']?>" name="feedbackName" type="text">
+											</div>
+											<div class="admin-section__input-wp">
+												<span>E-mail</span>
+												<input class="admin-section__input" value="<?=$feedback['mail']?>" name="feedbackMail" type="email">
+											</div>
+											<div class="admin-section__input-wp">
+												<span>Телефон</span>
+												<input class="admin-section__input" value="<?=$feedback['phone']?>" name="feedbackPhone" type="text">
+											</div>
+										</div>
+										<button class="admin-section__button">Удалить</button>
+									</form>
+								</div>
+							<?php } ?>
+						</div>
+					</div>
+				</div>
 				<div class="admin__section">
 					<div class="section__title-wp">
 						<h2 class="section__title">Блок "Команда"</h2>
