@@ -5,6 +5,7 @@ $('.works__item').on('click', (e) => {
     let thisModal = $($('.works__item-modal')[thisItemIndex])
     let thisModalClose = $($('.modal__close')[thisItemIndex])
     let thisOverlay = $($('.modal__overlay')[thisItemIndex])
+    let thisImages = $($('.modal__imgs')[thisItemIndex])
     thisModal.show({
         effect: 'fade',
         complete() {
@@ -12,7 +13,7 @@ $('.works__item').on('click', (e) => {
         }
     })
     thisModal.css('display', 'flex')
-    $('.modal__imgs').slick({
+    thisImages.slick({
         slidesToShow: 3,
         arrows: false,
     })
@@ -45,6 +46,8 @@ $('.clients__items-wp').slick({
 
 $('.header__camera').on('click', () => {
     let thisModal = $('.header__modal')
+    let thisVideo = $('.header__modal iframe')[0]
+    let thisVideoSrc = thisVideo.attributes.src.value
     let thisModalClose = $('.header__modal .modal__close')
     let thisOverlay = $('.header__modal .modal__overlay')
     thisModal.show({
@@ -58,11 +61,13 @@ $('.header__camera').on('click', () => {
         thisModal.hide({
             effect: 'fade',
         })
+        thisVideo.attributes.src.value = thisVideoSrc
     })
     thisOverlay.on('click', () => {
         thisModal.hide({
             effect: 'fade',
         })
+        thisVideo.attributes.src.value = thisVideoSrc
     })
 })
 

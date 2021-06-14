@@ -292,13 +292,22 @@ while ($item = $selectWorkers->fetch_array()) {
 		</ul>
 		<div class="modal__imgs">
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img1.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img2.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img3.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img4.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img5.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img6.png" alt="item"></a>
 			</div>
 		</div>
 		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале</a>
@@ -323,13 +332,22 @@ while ($item = $selectWorkers->fetch_array()) {
 		</ul>
 		<div class="modal__imgs">
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img1.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img2.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img3.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img4.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img5.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img6.png" alt="item"></a>
 			</div>
 		</div>
 		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале</a>
@@ -353,13 +371,22 @@ while ($item = $selectWorkers->fetch_array()) {
 		</ul>
 		<div class="modal__imgs">
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img1.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img2.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img3.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img4.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img5.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img6.png" alt="item"></a>
 			</div>
 		</div>
 		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале:</a>
@@ -383,13 +410,22 @@ while ($item = $selectWorkers->fetch_array()) {
 		</ul>
 		<div class="modal__imgs">
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img1.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img2.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img3.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img4.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img5.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img6.png" alt="item"></a>
 			</div>
 		</div>
 		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале:</a>
@@ -413,13 +449,22 @@ while ($item = $selectWorkers->fetch_array()) {
 		</ul>
 		<div class="modal__imgs">
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img1.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img2.png" alt="item"></a>
 			</div>
 			<div class="modal__img">
-				<img src="" alt="">
+				<a href="#"><img src="images/what-we-do/adv/img3.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img4.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img5.png" alt="item"></a>
+			</div>
+			<div class="modal__img">
+				<a href="#"><img src="images/what-we-do/adv/img6.png" alt="item"></a>
 			</div>
 		</div>
 		<a href="#" class="modal__more">Больше роликов на нашем YouTube канале:</a>
@@ -431,12 +476,9 @@ while ($item = $selectWorkers->fetch_array()) {
 	</div>
 	<div class="modal__content">
 		<span class="modal__close">&times;</span>
-		<div class="section__title-wp modal__title-wp">
-			<h2 class="section__title">Что мы снимаем</h2>
-		</div>
 		<iframe 
-			width="342" 
-			height="204" 
+			width="800" 
+			height="450" 
 			src="https://www.youtube.com/embed/QDYifetF7ss" 
 			title="YouTube video player" 
 			frameborder="0" 
